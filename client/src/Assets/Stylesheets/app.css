@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Open+Sans:wght@300;400;600;700&family=Space+Mono:wght@400;700&display=swap');
+/*font-family: 'Allura', cursive;
+font-family: 'Space Mono', monospace;
+font-family: 'Open Sans', sans-serif;*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+   background-color:#0D0C0C;
+}
+html{
+    scroll-behavior: smooth;
+    scroll-snap-type: mandatory;
+}
+
+.floating-links{
+    position: fixed;
+    color: #FFFFFF;
+    z-index: 1;
+    left: 1rem;
+    bottom: 5rem;
+    display: none;
+}
+.floating-icon{
+    padding: 0.7rem;
+}
+.floating-icon span:hover{
+    cursor: pointer;
+    font-size: 2.2rem;
+}
+.floating-links span{
+    font-size: 2rem;
+}
+
+
+.no{
+    display: none;
+}
+@media only screen and (min-width:1100px){
+ 
+    .floating-links{
+        display: block;
+    }
+    .account-links{
+        display: none !important;
+    }
+ }

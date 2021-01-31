@@ -1,0 +1,14 @@
+.projects{
+   
+    height: 105vh;
+    width: 100%;
+}
+.projects h1{
+    color:#FFFFFF;
+}
+@media only screen and (min-width:1200px){
+    .projects{
+        
+    }
+  
+ }
