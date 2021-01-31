@@ -11,8 +11,9 @@
   },
   "devDependencies": {},
   "scripts": {
-    "serve": "nodemon server"
+    "serve": "nodemon server",
+    "heroku-postbuild": "cd client && npm install && npm run build" 
   },
-  "author": "",
+  "author": "Ryan Ali",
   "license": "ISC"
 }
