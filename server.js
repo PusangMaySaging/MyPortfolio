@@ -3,7 +3,7 @@ const express = require('express');
 const path = require('path')
 const cors = require('cors')
 const app = express();
-const port = process.env.SERVER_PORT || 5000;
+const port = process.env.PORT || 5000;
 const sendGridMail = require('@sendgrid/mail');
 sendGridMail.setApiKey(process.env.SEND_GRID_API_KEY);
 const bodyParser = require('body-parser');
@@ -48,7 +48,7 @@ sendGridMail.send(email).then(resp =>{
     res.send("OK");
 })
 app.listen(port,()=>{
-    console.log("Server Up and Running");
+    console.log("Server Up and Running at PORT: " + process.env.PORT);
 })
 
 
