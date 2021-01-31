@@ -11,7 +11,7 @@ const bodyParser = require('body-parser');
 
 
 const corsSettings = {
-    origin:"http://localhost:5000",
+    origin:"https://ryan-ali.herokuapp.com",
     preflightContinue: false,
     methods:"POST"
 }

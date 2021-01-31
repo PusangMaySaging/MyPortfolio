@@ -39,7 +39,7 @@ function Contact(props) {
         e.preventDefault()
         axios.post('http://localhost:5000/email',email, {headers:{
         'Content-Type': 'application/json',
-        "Access-Control-Allow-Origin": "http://localhost:5000"
+        "Access-Control-Allow-Origin": "https://ryan-ali.herokuapp.com"
        }}).then(resp=>{
            console.log(resp.data)
        });
