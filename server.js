@@ -41,11 +41,13 @@ app.post('/email',(req,res)=>{
     }
 sendGridMail.send(email).then(resp =>{
     console.log(resp)
-   }).catch(err=>{
-       console.log(err)
-   })
     res.status(201)
     res.send("OK");
+   }).catch(err=>{
+       console.log(err)
+       res.status(500)
+   })
+    
 })
 app.listen(port,()=>{
     console.log("Server Up and Running at PORT: " + process.env.PORT);
