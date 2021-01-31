@@ -37,13 +37,13 @@ function Contact(props) {
     }
     function handleSubmitForm(e){
         e.preventDefault()
-        axios.post('http://localhost:5000/email',email, {headers:{
+        axios.post('https://ryan-ali.herokuapp.com/email',email, {headers:{
         'Content-Type': 'application/json',
         "Access-Control-Allow-Origin": "https://ryan-ali.herokuapp.com"
        }}).then(resp=>{
 
            console.log(resp.data)
-           
+
        }).catch(err=>{
            console.log(err)
        });
