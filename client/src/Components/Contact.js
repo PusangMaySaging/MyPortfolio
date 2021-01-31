@@ -41,7 +41,9 @@ function Contact(props) {
         'Content-Type': 'application/json',
         "Access-Control-Allow-Origin": "https://ryan-ali.herokuapp.com"
        }}).then(resp=>{
+
            console.log(resp.data)
+           
        }).catch(err=>{
            console.log(err)
        });
