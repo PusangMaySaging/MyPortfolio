@@ -1,4 +1,4 @@
-import React,{useEffect,useRef} from 'react';
+import React,{useEffect,useRef,useState} from 'react';
 import gsap from 'gsap';
 import { BiHomeSmile,BiMailSend } from "react-icons/bi";
 import {AiOutlineInfoCircle,AiOutlineProject } from "react-icons/ai";
@@ -7,9 +7,9 @@ import { IconContext } from "react-icons";
 function MobileNavigation(props) {
 
    let floatingNav = useRef()
-
     useEffect(()=>{
         let lastScrollTop = 0;
+
         function handleScroll(){
            let st = window.pageYOffset || document.documentElement.scrollTop; 
            if (st > lastScrollTop){
@@ -33,26 +33,26 @@ function MobileNavigation(props) {
                 
                 <ul className="nav-links"> 
                 <li className="nav-items"><a href="#home">
-                <IconContext.Provider value={{  className: "icon-home link-icon" }}>
+                <IconContext.Provider value={{  className: "icon-home link-icon-nav" }}>
                     <BiHomeSmile />
                 </IconContext.Provider>
                     Back</a></li>
                 <li className="nav-items"><a href="#projects">
-                <IconContext.Provider value={{  className: "icon-project link-icon" }}>
+                <IconContext.Provider value={{  className: "icon-project link-icon-nav" }}>
                     <AiOutlineProject />
                 </IconContext.Provider>
                     Projects
                     
                 </a></li>
                 <li className="nav-items"><a href="#about">
-                <IconContext.Provider value={{  className: "icon-about link-icon" }}>
+                <IconContext.Provider value={{  className: "icon-about link-icon-nav" }}>
                     <AiOutlineInfoCircle/>
                 </IconContext.Provider>
                     About
                     
                 </a></li>
                 <li className="nav-items"><a href="#contact">
-                <IconContext.Provider value={{  className: "icon-resume link-icon" }}>
+                <IconContext.Provider value={{  className: "icon-resume link-icon-nav" }}>
                     <BiMailSend/>
                 </IconContext.Provider>
                  Get in Touch
