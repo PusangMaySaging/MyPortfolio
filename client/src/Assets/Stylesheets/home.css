@@ -3,8 +3,9 @@
     height:92vh;
     overflow: hidden;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+
 }
 .home{
     width: calc(95vw - 5vw);
@@ -102,14 +103,24 @@
     }
     
 }
-
+@media only screen and (min-width:800px){
+    .home-section{
+        position: relative;
+        top: 15vh;
+    }
+}
 @media only screen and (min-width:1100px){
     
- 
+    .home-section{
+        position: relative;
+        top: 10vh;
+        background-color: red;
+    }
     .home{
         width: calc(65vw - 5vw);
-        margin: calc(10vh + 5vw) auto;
-        height: 70vh;
+        margin: calc(20vh + 5vw) auto !;
+        height: 60vh;
+        background-color: royalblue;
       
     }
     .home::before{

@@ -38,7 +38,6 @@ html{
     font-size: 2rem;
 }
 
-
 .no{
     display: none;
 }
@@ -54,7 +53,7 @@ html{
     margin: auto;
     background-color:#FFFFFF;
     border-radius: 10px;
-    height: 8vh;
+    height: 10vh;
     
 }
 .floating-navigation nav{

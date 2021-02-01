@@ -15,11 +15,11 @@ function Contact(props) {
     let contactForm = useRef();
     
     useEffect(()=>{
-        timeLine.fromTo(contactTitle,{opacity:0,x:-70},{opacity:1,x:0,duration:0.5, ease:"Power2.easeOut"})
-        timeLine.fromTo(contactForm,{opacity:0,x:70},{opacity:1,x:0,duration:0.5, ease:"Power2.easeOut"})
+        timeLine.fromTo(contactTitle.current,{opacity:0,x:-70},{opacity:1,x:0,duration:0.5, ease:"Power2.easeOut"})
+        timeLine.fromTo(contactForm.current,{opacity:0,x:70},{opacity:1,x:0,duration:0.5, ease:"Power2.easeOut"})
     },[])
-    
-    
+
+
     const contactSection = useInViewEffect(([entry],observer)=>{
         if(entry.isIntersecting){
             timeLine.play();
@@ -54,15 +54,14 @@ function Contact(props) {
         <div className="contact" ref={contactSection} id="contact">
              <div className="contact-wrapper">
                 <div className="contact-title"
-                 ref={element=>{
-                    contactTitle=element
-                }}>
+                 ref={
+                    contactTitle
+                }>
                     <span>Let's Work Together</span>
                 </div>
                 <div className="contact-form-wrapper" 
-                ref={element=>{
-                    contactForm=element
-                    }}>
+                ref={
+                    contactForm}>
                     <form className="contact-form" onSubmit={handleSubmitForm}> 
             <div className="form-wrapper">
                 <label htmlFor="name">Your Name</label>

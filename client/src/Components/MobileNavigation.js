@@ -6,28 +6,39 @@ import { IconContext } from "react-icons";
 
 function MobileNavigation(props) {
 
-   let floatingNav = useRef()
-    useEffect(()=>{
-        let lastScrollTop = 0;
 
+   let floatingNav = useRef();
+    let scrollRef = useRef("DOWN")
+
+    useEffect(()=>{
+      
+        let lastScrollTop = 0;
         function handleScroll(){
+            
            let st = window.pageYOffset || document.documentElement.scrollTop; 
            if (st > lastScrollTop){
-              gsap.to(floatingNav,{y:50,height:0,duration:0.2,ease:"Power2.easeOut"})
+            //condition to execute animation one at a time
+            if(scrollRef.current !== "UP")
+              gsap.to(floatingNav.current,{y:50,height:0,duration:0.2,ease:"Power2.easeOut"})
+              scrollRef.current = "UP"   
            } else {
-            gsap.to(floatingNav,{y:0,height:"10vh",duration:0.2,ease:"Power2.easeOut"})
+            //condition to execute animation one at a time
+            if(scrollRef.current != "DOWN"){
+            gsap.to(floatingNav.current,{y:0,height:"10vh",duration:0.2,ease:"Power2.easeOut"})
+            scrollRef.current = "DOWN"
+            }
+            
            }
            lastScrollTop = st <= 0 ? 0 : st; 
+            
         }
-        
         window.addEventListener("scroll",handleScroll, false);
-
         return ()=>{
             window.removeEventListener('scroll',handleScroll,false);
         }
-    },[])
+    },[ ])
     return (
-        <div ref={element=>{floatingNav = element}} className="mobile-nav-wrapper">
+        <div ref={floatingNav} className="mobile-nav-wrapper">
       
         <nav className="floating-navigation">
                 
@@ -36,7 +47,7 @@ function MobileNavigation(props) {
                 <IconContext.Provider value={{  className: "icon-home link-icon-nav" }}>
                     <BiHomeSmile />
                 </IconContext.Provider>
-                    Back</a></li>
+                    Top</a></li>
                 <li className="nav-items"><a href="#projects">
                 <IconContext.Provider value={{  className: "icon-project link-icon-nav" }}>
                     <AiOutlineProject />

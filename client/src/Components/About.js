@@ -8,8 +8,8 @@ function About(props) {
     let aboutDesc = useRef();
     const timeLine = gsap.timeline().pause();
     useEffect(()=>{
-        timeLine.fromTo(abouTitleText,{opacity:0, y: 70},{opacity:1,y:0, duration: 0.5,ease:"Power2.easeOut"})
-        timeLine.fromTo(aboutDesc,{opacity:0,y:70},{opacity:1,y:0,duration:0.5,ease:"Power2.easeOut"})
+        timeLine.fromTo(abouTitleText.current,{opacity:0, y: 70},{opacity:1,y:0, duration: 0.5,ease:"Power2.easeOut"})
+        timeLine.fromTo(aboutDesc.current,{opacity:0,y:70},{opacity:1,y:0,duration:0.5,ease:"Power2.easeOut"})
     })
     const aboutSection  = useInViewEffect(([entry],observer)=>{
         if(entry.isIntersecting){
@@ -19,16 +19,15 @@ function About(props) {
     },{threshold : 0.5})
 
 
-
     return (
         <div className="about" ref={aboutSection} id="about">
             <div className="about-wrapper">
                 <div className="about-title" 
-                ref={element=>{abouTitleText=element}}>
+                ref={abouTitleText}>
                     <span>My Journey</span>
                 </div>
                 <div className="about-desc" 
-                ref={element=>{aboutDesc=element}}>
+                ref={aboutDesc}>
                     <span className="about-desc-text">Hello, <b>I am Ryan Ali.</b> A full stack web developer based on the Philippines. <br/><br/>I am pursuing my degree as a Sophomore at <b>STI College Munoz Edsa</b>. 
                     I am immersed in web development and passionate in developing web applications. My interest started in 2019 and develop some projects during my spare time.</span>
                     <br/>

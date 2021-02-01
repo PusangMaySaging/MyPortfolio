@@ -1,3 +1,4 @@
+import {useState} from 'react'
 import './Assets/Stylesheets/app.css'
 import './Assets/Stylesheets/header.css'
 import './Assets/Stylesheets/home.css'
@@ -23,9 +24,9 @@ function App() {
       <AccountLinks></AccountLinks>
       <Project></Project>
       <About></About>
-      <Contact></Contact>
+      <Contact ></Contact>
       </div>
-      <MobileNavigation></MobileNavigation>
+      <MobileNavigation ></MobileNavigation>
       <Footer></Footer>
    
     </>
