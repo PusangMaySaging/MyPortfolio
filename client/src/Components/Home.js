@@ -21,8 +21,7 @@ function Home(props) {
             <section 
             className="tag-line"
             ref={element=>{tagLineText= element}}
-            >
-                <span>I will help you get the most out of the World Wide Web.</span>
+            > <span>I will help you get the most out of the World Wide Web.</span>
             </section>
         
            

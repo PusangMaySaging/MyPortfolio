@@ -12,7 +12,7 @@ import AccountLinks from './Components/AccountLinks'
 import Project from './Components/Project'
 import About from './Components/About'
 import Contact from './Components/Contact'
-
+import MobileNavigation from './Components/MobileNavigation'
 function App() {
 
   return (
@@ -25,8 +25,9 @@ function App() {
       <About></About>
       <Contact></Contact>
       </div>
+      <MobileNavigation></MobileNavigation>
       <Footer></Footer>
-
+   
     </>
   );
 }

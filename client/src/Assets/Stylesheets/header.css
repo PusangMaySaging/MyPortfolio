@@ -3,11 +3,10 @@ header{
     height: 10vh;
     max-height: 100px;
     min-height: 100px;
-    position: fixed;
     width: 100%;
     top: 0;
     background-color: #0D0C0C;
-    z-index: 1;
+  
 }
 header .header-title{
     margin-left: 1.5rem;
@@ -72,5 +71,10 @@ nav span{
     }
     .desktop-nav{
         display: block;
+    }
+
+    header{
+        position: fixed;
+        z-index: 1;
     }
  }
