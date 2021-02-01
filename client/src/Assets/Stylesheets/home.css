@@ -114,13 +114,12 @@
     .home-section{
         position: relative;
         top: 10vh;
-        background-color: red;
+       
     }
     .home{
         width: calc(65vw - 5vw);
         margin: calc(20vh + 5vw) auto !;
         height: 60vh;
-        background-color: royalblue;
       
     }
     .home::before{
