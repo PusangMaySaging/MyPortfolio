@@ -14,17 +14,27 @@ import Project from './Components/Project'
 import About from './Components/About'
 import Contact from './Components/Contact'
 import MobileNavigation from './Components/MobileNavigation'
-function App() {
+import Modal from './Components/Modal'
 
+function App() {
+  const [messageState,setMessageState] = useState({message:"NO_ERROR",
+  isAnimate:false
+  }
+);
+
+  function changeMessageState(value){
+    setMessageState(value)
+  }
   return (
     <>
+      <Modal messageState={messageState}></Modal>
       <Header></Header>
       <div className="portfolio-sections">
       <Home></Home>
       <AccountLinks></AccountLinks>
       <Project></Project>
       <About></About>
-      <Contact ></Contact>
+      <Contact changeMessageState={changeMessageState} ></Contact>
       </div>
       <MobileNavigation ></MobileNavigation>
       <Footer></Footer>

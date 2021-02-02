@@ -14,7 +14,7 @@ function Home(props) {
             timeLine.fromTo(descText.current,{y:50,opacity:0},{y:0,opacity:1,ease:"Power2.easeOut", duration: 0.3},);
             timeLine.fromTo(CTA.current,{x:50,opacity:0},{x:0,opacity:1,ease:"Power2.easeOut",duration:0.4});
 
-        },[])
+        })
     return (
         <div className="home-section" id="home">
         <div className="home">       

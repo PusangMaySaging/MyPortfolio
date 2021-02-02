@@ -5,6 +5,7 @@ import axios from 'axios'
 function Contact(props) {
 
     const timeLine = gsap.timeline().pause()
+
     const [email,setEmail] = useState({
         senderName: ' ',
         senderEmail: ' ', 
@@ -17,7 +18,7 @@ function Contact(props) {
     useEffect(()=>{
         timeLine.fromTo(contactTitle.current,{opacity:0,x:-70},{opacity:1,x:0,duration:0.5, ease:"Power2.easeOut"})
         timeLine.fromTo(contactForm.current,{opacity:0,x:70},{opacity:1,x:0,duration:0.5, ease:"Power2.easeOut"})
-    },[])
+    },[ ])
 
 
     const contactSection = useInViewEffect(([entry],observer)=>{
@@ -41,11 +42,24 @@ function Contact(props) {
         'Content-Type': 'application/json',
         "Access-Control-Allow-Origin": "https://ryan-ali.herokuapp.com"
        }}).then(resp=>{
-
-           console.log(resp.data)
+           if(resp.status === 201){
+            props.changeMessageState({
+                message:"NO_ERROR",
+                isAnimate:true
+            })
+           }    
+           else{
+            props.changeMessageState({
+                message:"ERROR",
+                isAnimate:true
+            })
+           }
 
        }).catch(err=>{
-           console.log(err)
+        props.changeMessageState({
+            message:"ERROR",
+            isAnimate:true
+        })
        });
        
     }

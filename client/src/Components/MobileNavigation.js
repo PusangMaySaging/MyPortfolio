@@ -1,4 +1,4 @@
-import React,{useEffect,useRef,useState} from 'react';
+import React,{useEffect,useRef} from 'react';
 import gsap from 'gsap';
 import { BiHomeSmile,BiMailSend } from "react-icons/bi";
 import {AiOutlineInfoCircle,AiOutlineProject } from "react-icons/ai";
@@ -23,7 +23,7 @@ function MobileNavigation(props) {
               scrollRef.current = "UP"   
            } else {
             //condition to execute animation one at a time
-            if(scrollRef.current != "DOWN"){
+            if(scrollRef.current !== "DOWN"){
             gsap.to(floatingNav.current,{y:0,height:"10vh",duration:0.2,ease:"Power2.easeOut"})
             scrollRef.current = "DOWN"
             }
@@ -36,7 +36,7 @@ function MobileNavigation(props) {
         return ()=>{
             window.removeEventListener('scroll',handleScroll,false);
         }
-    },[ ])
+    })
     return (
         <div ref={floatingNav} className="mobile-nav-wrapper">
       
