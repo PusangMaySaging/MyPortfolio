@@ -13,13 +13,14 @@ function Modal(props) {
     useEffect(()=>{
         timeLine.from(messageRef.current,{y:-50,height:"0vh"})
     },[])
+
     useEffect(()=>{
         let DELAY = 0;
         if(props.messageState.message === "NO_ERROR"){
-            DELAY = 3; //seconds
+            DELAY = 3; //seconds, no error delay
         }
         else{
-            DELAY = 5 //seconds
+            DELAY = 5 //seconds of delay if there is error
         }
         timeLine.to(messageRef.current,{y:0,height:"10vh"})
         timeLine.to(messageRef.current,{y:-50,height:"0vh"},`+=${DELAY}`)

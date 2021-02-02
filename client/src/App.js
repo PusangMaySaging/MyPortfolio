@@ -21,7 +21,6 @@ function App() {
   isAnimate:false
   }
 );
-
   function changeMessageState(value){
     setMessageState(value)
   }

@@ -139,6 +139,7 @@ html{
     z-index: -9999;
     pointer-events: none;
   }
+ 
   @media only screen and (min-width:600px){
     
     .link-icon-nav{
@@ -150,6 +151,41 @@ html{
  .floating-navigation{
      display: none;
  }
+ .modal{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 10vh;
+    top: 80vh;
+    position: fixed !important;  
+    z-index: 3;
+    overflow: hidden;
+}
+
+ }
+
+ @media only screen and (min-width:1000px){
+    .modal{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        height: 10vh;
+        top: 85vh;
+        position: fixed !important;  
+        z-index: 3;
+        overflow: hidden;
+    }
+    .modal-message{
+        width: 40%;
+        max-width: 510px;
+        margin-right: 20px;
+        height: 10vh;
+        display: flex;
+        align-items: center;
+        border-radius: 10px;
+        background-color: #FFFFFF;
+        gap: 1rem;
+    }
  }
 @media only screen and (min-width:1100px){
  
