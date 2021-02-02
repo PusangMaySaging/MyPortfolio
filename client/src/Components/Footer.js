@@ -10,16 +10,20 @@ function Footer(props) {
                <section className="account-links">
                    <div className="link-icon">
                    <IconContext.Provider value={{  className: "icon-github" }}>
+                   <a href="https://github.com/pusangMaySaging" target="_blank">
                 <span>
                     <AiFillGithub />
                     </span>
+                    </a>
                 </IconContext.Provider>
                    </div>
                    <div className="link-icon">
                    <IconContext.Provider value={{  className: "icon-fb" }}>
+                   <a href="https://www.facebook.com/ryanali23" target="_blank">
                 <span>
                     <FaFacebook />
                     </span>
+                    </a>
                 </IconContext.Provider>
                    </div>
                </section>

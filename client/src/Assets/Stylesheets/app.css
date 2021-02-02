@@ -34,6 +34,9 @@ html{
     cursor: pointer;
     font-size: 2.2rem;
 }
+.floating-icon a{
+   color:#FFFFFF
+}
 .floating-links span{
     font-size: 2rem;
 }
@@ -88,10 +91,14 @@ html{
       font-size: calc(1rem);
      
   }
-
-  .icon-resume{
-
+  .link-icon a{
+      color: #FFFFFF;
   }
+
+ a{
+   
+    -webkit-tap-highlight-color: transparent;
+ }
   .modal{
       width: 100%;
       display: flex;
@@ -167,7 +174,8 @@ html{
 
  @media only screen and (min-width:1000px){
     .modal{
-        width: 100%;
+        width: 90%;
+        right: 0;
         display: flex;
         justify-content: flex-end;
         height: 10vh;
