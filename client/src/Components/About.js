@@ -10,7 +10,7 @@ function About(props) {
     useEffect(()=>{
         timeLine.fromTo(abouTitleText.current,{opacity:0, y: 70},{opacity:1,y:0, duration: 0.5,ease:"Power2.easeOut"})
         timeLine.fromTo(aboutDesc.current,{opacity:0,y:70},{opacity:1,y:0,duration:0.5,ease:"Power2.easeOut"})
-    })
+    },[ ])
     const aboutSection  = useInViewEffect(([entry],observer)=>{
         if(entry.isIntersecting){
             timeLine.play()

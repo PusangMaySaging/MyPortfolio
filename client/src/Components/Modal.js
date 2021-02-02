@@ -10,10 +10,7 @@ function Modal(props) {
     let messageRef = useRef()
 
     const timeLine = gsap.timeline().pause()
-    useEffect(()=>{
-        timeLine.from(messageRef.current,{y:-50,height:"0vh"})
-    },[])
-
+    
     useEffect(()=>{
         let DELAY = 0;
         if(props.messageState.message === "NO_ERROR"){
