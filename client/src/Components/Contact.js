@@ -38,11 +38,13 @@ function Contact(props) {
     }
     function handleSubmitForm(e){
         e.preventDefault()
+     
         axios.post('https://ryan-ali.herokuapp.com/email',email, {headers:{
         'Content-Type': 'application/json',
         "Access-Control-Allow-Origin": "https://ryan-ali.herokuapp.com"
        }}).then(resp=>{
            if(resp.status === 201){
+            e.target.reset();
             props.changeMessageState({
                 message:"NO_ERROR",
                 isAnimate:true
