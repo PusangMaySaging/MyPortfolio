@@ -48,7 +48,7 @@ function MobileNavigation(props) {
                     <BiHomeSmile />
                 </IconContext.Provider>
                     Top</a></li>
-                <li className="nav-items"><a href="#projects">
+                <li className="nav-items"><a href="#project">
                 <IconContext.Provider value={{  className: "icon-project link-icon-nav" }}>
                     <AiOutlineProject />
                 </IconContext.Provider>

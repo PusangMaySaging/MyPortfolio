@@ -119,7 +119,7 @@
     .home{
         width: calc(65vw - 5vw);
         margin: calc(20vh + 5vw) auto !;
-        height: 60vh;
+        height: 70vh;
       
     }
     .home::before{

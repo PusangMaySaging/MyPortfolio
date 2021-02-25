@@ -42,10 +42,10 @@ function Home(props) {
             </div>
             <section ref={CTA} className="cta-sections">
             <div className="cta cta-projects">
-                <span>See Projects</span>
+                <span><a  className="blk" href="#project">See Projects</a></span>
             </div>
             <div className="cta cta-about">
-             <span>Get in touch</span>
+            <span><a  className="wh" href="#contact">Get in Touch</a></span>
             </div>
             </section>
         </div>
