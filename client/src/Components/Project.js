@@ -52,12 +52,12 @@ function Projects(props) {
                     </div>
                     <div className="CTA">
                     <section  className="cta-sections">
-            <div className="cta cta-projects">
-                <span><a className="blk" href="https://github.com/PusangMaySaging/ContactTracing" target="_blank">Repository</a></span>
-            </div>
-            <div className="cta cta-about">
-             <span><a className="wh" href="https://campus-contact-tracing.herokuapp.com/" target="_blank">View Project</a></span>
-            </div>
+            <a className="cta blk cta-projects" href="https://github.com/PusangMaySaging/ContactTracing"  target="_blank" >
+                <span>Repository</span>
+            </a>
+            <a className="cta cta-about wh" href="https://campus-contact-tracing.herokuapp.com/" target="_blank">
+             <span>View Project</span>
+            </a>
             </section>
                     </div>
                 </div>
@@ -80,12 +80,12 @@ function Projects(props) {
                     </div>
                     <div className="CTA">
                     <section  className="cta-sections">
-            <div className="cta cta-projects">
-                <span><a className="blk" href="https://github.com/PusangMaySaging/codebox" target="_blank">Repository</a></span>
-            </div>
-            <div className="cta cta-about">
-             <span><a className="wh" href="https://codeboxsave.herokuapp.com/views/home.html" target="_blank">View Project</a></span>
-            </div>
+            <a className="cta blk cta-projects" href="https://github.com/PusangMaySaging/codebox"  target="_blank" >
+                <span>Repository</span>
+            </a>
+            <a className="cta cta-about wh" href="https://codeboxsave.herokuapp.com/views/home.html" target="_blank">
+             <span>View Project</span>
+            </a>
             </section>
                     </div>
                 </div>

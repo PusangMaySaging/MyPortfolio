@@ -99,6 +99,9 @@ html{
    
     -webkit-tap-highlight-color: transparent;
  }
+ .cta{
+     text-decoration:none;
+ }
   .modal{
       width: 100%;
       display: flex;
