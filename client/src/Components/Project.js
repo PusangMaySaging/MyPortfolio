@@ -42,7 +42,7 @@ function Projects(props) {
                         <span>Campus Contact Tracing PWA</span>
                     </div>
                     <div className="subtitle">
-                       <span> A Progressive Web Application developed using MERN stack with Twilio Verify API. </span>
+                       <span>A Progressive Web Application developed using MERN stack with Twilio Verify API and Cloudinary Cloud Storage.</span>
                     </div>
                     <div className="sub-subtitle">
                     <span>This PWA was made for school campuses. By Scanning their QR code, Filling up forms is no longer required 
@@ -75,7 +75,7 @@ function Projects(props) {
                     </div>
                     <div className="sub-subtitle">
                     <span>CodeBox is made for people or students who doesn’t know how to use git or github. 
-                        Instead of sending your friends text file of your code.  Just paste your code and send it the link. They can easily view and put in their machine. 
+                        Instead of sending your friends text file of your code. Just paste your code and send the link. So they can view it and put in their machine. 
                      </span>
                     </div>
                     <div className="CTA">
